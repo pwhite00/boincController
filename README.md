@@ -57,3 +57,9 @@ Ok but What is BOINC ??
    $ cd boincController
    $ go fmt && golint && go build && ./boincController --config {your config.json}
    </pre>
+   
+   
+   Container available on Dockerhub.com
+   <pre>
+   $ docker pull pwhite00/boinc_client
+   </pre>
