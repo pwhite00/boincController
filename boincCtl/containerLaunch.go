@@ -48,12 +48,12 @@ func execCmd(l *LaunchConfig, n bool) {
 			time.Sleep(1 * time.Second)
 			switch n {
 			case true:
-				fmt.Printf("NOOP: docker run -ti -d --name %s-%d -e boincurl=%s -e boinckey=%s boinc_client\n", l.Containers[i].BaseName, timeStamp, l.Containers[i].ProjectTarget, l.Containers[i].ProjectKey)
+				fmt.Printf("NOOP: docker run -ti -d --name %s-%d -e boincurl=%s -e boinckey=%s pwhite00/boinc_client\n", l.Containers[i].BaseName, timeStamp, l.Containers[i].ProjectTarget, l.Containers[i].ProjectKey)
 
 			case false:
 				fmt.Printf("EXEC: instance %d, name %s\n", x+1, l.Containers[i].BaseName)
 				launchCommand := "docker"
-				cmdArgs := []string{"run", "-ti", "-d", "--name", l.Containers[i].BaseName + "-" + strconv.FormatInt(timeStamp, 10), "-e", "boincurl=" + l.Containers[i].ProjectTarget, "-e", "boinckey=" + l.Containers[i].ProjectKey, "boinc_client"}
+				cmdArgs := []string{"run", "-ti", "-d", "--name", l.Containers[i].BaseName + "-" + strconv.FormatInt(timeStamp, 10), "-e", "boincurl=" + l.Containers[i].ProjectTarget, "-e", "boinckey=" + l.Containers[i].ProjectKey, "pwhite00/boinc_client"}
 				err := exec.Command(launchCommand, cmdArgs...).Run()
 				if err != nil {
 					fmt.Printf("%s-%d launch [Error]: [%v]\n", l.Containers[i].BaseName, timeStamp, err)
