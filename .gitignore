@@ -1,0 +1,9 @@
+*.BIN
+*.zip
+*.tgz
+*.gz
+*do_not_save*
+*.idea
+*.tar
+*.rar
+*.bz2

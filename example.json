@@ -1,0 +1,16 @@
+{
+  "containers": [
+    {
+      "baseName": "project1",
+      "runningCount": 1,
+      "projectTarget": "project1_url",
+      "projectKey": "project_1_key"
+    },
+    {
+      "baseName": "project_2",
+      "runningCount": 0,
+      "projectTarget": "project_2_url",
+      "projectKey": "project_2_key"
+    }
+  ]
+}
