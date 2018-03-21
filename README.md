@@ -8,11 +8,13 @@ What is boincController ?
 
 Ok but What is BOINC ??
   [BOINC](https://boinc.berkeley.edu/) is an open computing platform designed to use shared computing resources. It allows
-  volunteers to use extra cou cycles to solve hard computuing problems by donting unused time on a local machine.
+  volunteers to use extra cpu cycles to solve hard computuing problems by donting unused time on a local machine.
   
   Some of the projects that are avalable to volunteer on are:
     * [SETI@home](https://setiathome.berkeley.edu/)
+
     * [IBM World Community Grid](https://worldcommunitygrid.org/)
+    
     * [Einstein@Home](https://einsteinathome.org/)
    
    
@@ -25,6 +27,10 @@ Ok but What is BOINC ??
       <pre>
       $ docker pull pwhite00/boinc_client:latest
       </pre>
+
+      or 
+
+
       b) use the Dockerfile to locally build your container. (included in your forked copy of the repo.)
       <pre>
       $ git clone git@github.com:{you}/boincController.git
@@ -41,13 +47,13 @@ Ok but What is BOINC ??
           "baseName": "worldComputeGrid",
           "runningCount": 2,
           "projectTarget": "http://www.worldcommunitygrid.org/",
-          "projectKey": "QVk4boOESndk8dXuqkfM0v8WYv5fflhv"
+          "projectKey": "QVk4boOESndk8dXuqkfM0v8WYv5fflhv"   <--- not my real project key
         },
         {
           "baseName": "setiAtHome",
           "runningCount": 2,
           "projectTarget": "http://setiathome.berkeley.edu/",
-          "projectKey": "0VGTCrsHC9f4laQyeV7WLNBApcR9xC7W"
+          "projectKey": "0VGTCrsHC9f4laQyeV7WLNBApcR9xC7W"   <--- not my real project key
         }
       ]
     }
